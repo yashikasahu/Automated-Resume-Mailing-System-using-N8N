@@ -1,0 +1,54 @@
+# 📬 n8n Job Outreach Automation
+
+A smart automation workflow that sends personalized job application emails with attachments to multiple companies daily — fully powered by n8n, Google Sheets, and Gmail API.
+
+---
+
+## 🚀 Features
+
+- Fetches company data from Google Sheets
+- Sends dynamic HTML emails with Handlebars
+- Attaches custom resume
+- Updates Google Sheet with email status and timestamp
+- Fully automatic — no manual effort required
+
+---
+
+## 🛠 Tools Used
+
+- n8n (Cloud)
+- Google Sheets
+- Gmail API
+- Handlebars.js
+- HTML email templates
+
+---
+
+## 📸 Screenshots
+
+| Workflow in n8n | Sample Email Output |
+|-----------------|---------------------|
+| ![Workflow](<img width="1265" height="478" alt="Screenshot 2025-08-07 171326" src="https://github.com/user-attachments/assets/3567d640-f22f-4138-83fc-3b0b550fa100" />
+) | ![Email](./email.png) |
+
+---
+
+## 📂 Files Included
+
+- `job-outreach-workflow.json` – The complete n8n flow
+- `email-template.html` – The email content
+- `resume.pdf` – (Optional) Sample resume used
+
+---
+
+## 🧠 How It Works
+
+1. n8n pulls data from Google Sheets
+2. Sends personalized email to each row
+3. Attaches resume and logs sent date in sheet
+
+---
+
+## 🧾 License
+
+MIT – feel free to use and modify!
