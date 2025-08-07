@@ -26,9 +26,11 @@ A smart automation workflow that sends personalized job application emails with 
 
 ## 📸 Screenshots
 
-| Workflow in n8n                        | Sample Email Output                |
-|---------------------------------------|------------------------------------|
-| ![Workflow](<src="https://github.com/user-attachments/assets/94228c5e-3966-47e7-bf1f-2526ead1109b" />)      | ![Email]![WhatsApp Image 2025-08-07 at 19 06 55_e1da8b08](https://github.com/user-attachments/assets/ee626f2d-be17-45c7-a018-75bb1ccb2926)  |
+-Workflow in n8n   
+<img width="1265" height="478" alt="Screenshot 2025-08-07 171326" src="https://github.com/user-attachments/assets/d99121fb-ca49-47a1-83ef-8c95311abbb1" />
+
+-Sample Email Output        
+![Email]![WhatsApp Image 2025-08-07 at 19 06 55_e1da8b08](https://github.com/user-attachments/assets/ee626f2d-be17-45c7-a018-75bb1ccb2926)  
 ## emails are blured because of privacy reason 
 ---
 
