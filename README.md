@@ -1,4 +1,4 @@
-# 📬 n8n Job Outreach Automation
+# 📬 N8N Job Outreach Automation
 
 A smart automation workflow that sends personalized job application emails with attachments to multiple companies daily — fully powered by n8n, Google Sheets, and Gmail API.
 
