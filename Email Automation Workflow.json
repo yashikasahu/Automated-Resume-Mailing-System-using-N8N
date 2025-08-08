@@ -1,0 +1,1253 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1U5N2OpGjwv_3a_rA5WgTGgOYWslaFmoyOmTxwzLPvPE",
+          "mode": "list",
+          "cachedResultName": "yashika india_company",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1U5N2OpGjwv_3a_rA5WgTGgOYWslaFmoyOmTxwzLPvPE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 216757620,
+          "mode": "list",
+          "cachedResultName": "india_df",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1U5N2OpGjwv_3a_rA5WgTGgOYWslaFmoyOmTxwzLPvPE/edit#gid=216757620"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -736,
+        -128
+      ],
+      "id": "5bf7014e-01fc-40aa-82ea-37be55a0a6ee",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vek9bnm9UdT36xRy",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1U5N2OpGjwv_3a_rA5WgTGgOYWslaFmoyOmTxwzLPvPE",
+          "mode": "list",
+          "cachedResultName": "yashika india_company",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1U5N2OpGjwv_3a_rA5WgTGgOYWslaFmoyOmTxwzLPvPE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 216757620,
+          "mode": "list",
+          "cachedResultName": "india_df",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1U5N2OpGjwv_3a_rA5WgTGgOYWslaFmoyOmTxwzLPvPE/edit#gid=216757620"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date": "={{ $now.toFormat('yyyy-MM-dd') }}\n",
+            "Website_URL": "={{ $json.Website_URL }}",
+            "Status ": "Mailed"
+          },
+          "matchingColumns": [
+            "Website_URL"
+          ],
+          "schema": [
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status ",
+              "displayName": "Status ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Place",
+              "displayName": "Place",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Website_URL",
+              "displayName": "Website_URL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Emails1",
+              "displayName": "Emails1",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Emails2",
+              "displayName": "Emails2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Emails3",
+              "displayName": "Emails3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Emails4",
+              "displayName": "Emails4",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Emails5",
+              "displayName": "Emails5",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Emails",
+              "displayName": "Emails",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -144,
+        -128
+      ],
+      "id": "6133181a-da7f-442d-b120-2a6052b51f94",
+      "name": "Update row in sheet",
+      "alwaysOutputData": true,
+      "executeOnce": false,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vek9bnm9UdT36xRy",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 10,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -320,
+        -128
+      ],
+      "id": "7e0e6870-25cf-4583-83cf-695e722787a9",
+      "name": "Iterate 10 Items"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-2.5-flash",
+          "mode": "list",
+          "cachedResultName": "models/gemini-2.5-flash"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.Website_URL }}give only company name from url "
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        16,
+        -128
+      ],
+      "id": "8081fb3a-36e5-4375-bc7a-263627887b3d",
+      "name": "company name",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "sMuuxqis9zlXrxkS",
+          "name": "Google Gemini(PaLM) Api account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "ac394261-411b-4bb2-af4f-a5de4d71c120",
+              "leftValue": "={{ $json['Status '] }}",
+              "rightValue": "No Mail",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            },
+            {
+              "id": "e785c70a-b175-444c-ad16-524c37c2d484",
+              "leftValue": "={{ $json['Status '] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -512,
+        -128
+      ],
+      "id": "5b9f55e1-3dc8-4769-9bf6-e655238c1c0a",
+      "name": "Check Mailed or not"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d5bcbe40-9e6a-44f1-aef9-9849fbcc561a",
+              "leftValue": "={{ $('Check Mailed or not').item.json.Emails1}}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        336,
+        -448
+      ],
+      "id": "d26f0bb7-86fe-4ca6-b071-f8a800c27368",
+      "name": "check Email1 is not empty"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d5bcbe40-9e6a-44f1-aef9-9849fbcc561a",
+              "leftValue": "={{ $('Check Mailed or not').item.json.Emails2 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        352,
+        -240
+      ],
+      "id": "544b4617-de3e-4460-900a-284b6d95ce9d",
+      "name": "check Email2 is not empty"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d5bcbe40-9e6a-44f1-aef9-9849fbcc561a",
+              "leftValue": "={{ $('Check Mailed or not').item.json.Emails3 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        336,
+        -32
+      ],
+      "id": "e10c1737-b00f-46e6-8f80-b5afe01b7d98",
+      "name": "check Email3 is not empty"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d5bcbe40-9e6a-44f1-aef9-9849fbcc561a",
+              "leftValue": "={{ $('Check Mailed or not').item.json.Emails4 }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        336,
+        160
+      ],
+      "id": "d4bf4539-73b9-44a2-b665-c0dabe7dbac7",
+      "name": "check Email4 is not empty",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "operation": "emailVerifier",
+        "email": "={{ $('Check Mailed or not').item.json.Emails1 }}"
+      },
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        544,
+        -448
+      ],
+      "id": "39fc2878-f9ed-4e9c-ad69-3c7771b06d0b",
+      "name": "Email1 verifier",
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "credentials": {
+        "hunterApi": {
+          "id": "6lEHP20794Hq3LDU",
+          "name": "Hunter account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "emailVerifier",
+        "email": "={{ $('Check Mailed or not').item.json.Emails2 }}"
+      },
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        560,
+        -240
+      ],
+      "id": "a2d784bf-3e6a-4c08-8a64-9f246bac66bb",
+      "name": "Email2 verifier",
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "credentials": {
+        "hunterApi": {
+          "id": "6lEHP20794Hq3LDU",
+          "name": "Hunter account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "emailVerifier",
+        "email": "={{ $('Check Mailed or not').item.json.Emails3 }}"
+      },
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        560,
+        -32
+      ],
+      "id": "c89e1b65-3d40-45d6-ad56-ea4cacf0fd77",
+      "name": "Email3 verifier",
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "credentials": {
+        "hunterApi": {
+          "id": "6lEHP20794Hq3LDU",
+          "name": "Hunter account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "emailVerifier",
+        "email": "={{ $('Check Mailed or not').item.json.Emails4 }}"
+      },
+      "type": "n8n-nodes-base.hunter",
+      "typeVersion": 1,
+      "position": [
+        560,
+        160
+      ],
+      "id": "26497c2b-21c2-43f6-ab65-ff4699e28752",
+      "name": "Email4 verifier",
+      "alwaysOutputData": true,
+      "retryOnFail": false,
+      "credentials": {
+        "hunterApi": {
+          "id": "6lEHP20794Hq3LDU",
+          "name": "Hunter account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "25e43b94-bb27-477a-a34e-a0a6e9b10919",
+              "leftValue": "={{ $json.result }}",
+              "rightValue": "deliverable",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        768,
+        -448
+      ],
+      "id": "bbaf5155-0173-4414-bd3f-3d997f02c13c",
+      "name": "Email 1 is Deliverable",
+      "executeOnce": false,
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "25e43b94-bb27-477a-a34e-a0a6e9b10919",
+              "leftValue": "={{ $json.result }}",
+              "rightValue": "deliverable",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        768,
+        -240
+      ],
+      "id": "de3a13fe-038a-4c9c-8636-4b213e1a33ee",
+      "name": "Email 2 is Deliverable",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "25e43b94-bb27-477a-a34e-a0a6e9b10919",
+              "leftValue": "={{ $json.result }}",
+              "rightValue": "deliverable",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        768,
+        -32
+      ],
+      "id": "c55e0a27-1af7-47d3-99cc-9ef4857ffde5",
+      "name": "Email 3 is Deliverable",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "25e43b94-bb27-477a-a34e-a0a6e9b10919",
+              "leftValue": "={{ $json.result }}",
+              "rightValue": "deliverable",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        784,
+        160
+      ],
+      "id": "019b9d6c-3fc8-49c0-b818-fd715ff6029c",
+      "name": "Email 4 is Deliverable",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://drive.google.com/uc?export=download&id=1cilhwPHdiEGIRLMV8XiieuhfcfSzj7Jy",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        976,
+        -448
+      ],
+      "id": "967139e5-4b0a-445a-a449-65c956e8c83c",
+      "name": "Resume",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://drive.google.com/uc?export=download&id=1cilhwPHdiEGIRLMV8XiieuhfcfSzj7Jy",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1008,
+        -256
+      ],
+      "id": "dd262d89-964c-439a-a6ff-c567c93730b5",
+      "name": "Resume1",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://drive.google.com/uc?export=download&id=1cilhwPHdiEGIRLMV8XiieuhfcfSzj7Jy",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1024,
+        -48
+      ],
+      "id": "f34567bc-fc97-4a28-b397-e1b914ac1056",
+      "name": "Resume2",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "url": "https://drive.google.com/uc?export=download&id=1cilhwPHdiEGIRLMV8XiieuhfcfSzj7Jy",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1024,
+        160
+      ],
+      "id": "5512345a-dfc6-40c7-8d5a-8bd84f849fc7",
+      "name": "Resume3",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Email 1 is Deliverable').item.json.email }}",
+        "subject": "Application for Data Analyst Intern",
+        "message": "=<p>Dear Sir/Ma'am,</p>\n\n<p>I hope you're doing well. I am interested in exploring job opportunities at <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>. My name is Yashika Sahu, and I am a Data Analyst. My skills and expertise can be valuable assets to <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>.</p>\n\n<p>Over the years, I have developed strong skills in <strong>Python, AI automation workflows, SQL, N8N, Power BI, Tableau, Machine Learning, and other relevant tools and technologies</strong>. My passion lies in using data to drive informed decision-making and contribute to business growth. My skills, experience, and enthusiasm make me an ideal fit for any relevant positions in <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>.</p>\n\n<p>I have attached my resume to this email. Please feel free to review it and let me know if any job openings match my skills and experience. I’m confident I can make meaningful contributions to your team.</p>\n\n<p>Thank you for taking the time to read this email. I look forward to hearing from you and discussing how I can support your team's success.</p>\n\n<p>Best regards,</p>\n<p>Yashika Sahu</p>",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1216,
+        -448
+      ],
+      "id": "5d81c2da-9431-4e9e-8c46-c75904c368b1",
+      "name": "Send a Mail1",
+      "webhookId": "89941501-a56f-4881-b1d2-d4cc9730c4bd",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "8jdSFJbcff1oFiEg",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Email 2 is Deliverable').item.json.email }}",
+        "subject": "Application for Data Analyst Intern",
+        "message": "=<p>Dear Sir/Ma'am,</p>\n\n<p>I hope you're doing well. I am interested in exploring job opportunities at <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>. My name is Yashika Sahu, and I am a Data Analyst. My skills and expertise can be valuable assets to <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>.</p>\n\n<p>Over the years, I have developed strong skills in <strong>Python, AI automation workflows, SQL, N8N, Power BI, Tableau, Machine Learning, and other relevant tools and technologies</strong>. My passion lies in using data to drive informed decision-making and contribute to business growth. My skills, experience, and enthusiasm make me an ideal fit for any relevant positions in <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>.</p>\n\n<p>I have attached my resume to this email. Please feel free to review it and let me know if any job openings match my skills and experience. I’m confident I can make meaningful contributions to your team.</p>\n\n<p>Thank you for taking the time to read this email. I look forward to hearing from you and discussing how I can support your team's success.</p>\n\n<p>Best regards,</p>\n<p>Yashika Sahu</p>",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1216,
+        -256
+      ],
+      "id": "86e80e77-e704-4643-9f93-87cc2b5c4f41",
+      "name": "Send a Mail2",
+      "webhookId": "89941501-a56f-4881-b1d2-d4cc9730c4bd",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "8jdSFJbcff1oFiEg",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Email 3 is Deliverable').item.json.email }}",
+        "subject": "Application for Data Analyst Intern",
+        "message": "=<p>Dear Sir/Ma'am,</p>\n\n<p>I hope you're doing well. I am interested in exploring job opportunities at <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>. My name is Yashika Sahu, and I am a Data Analyst. My skills and expertise can be valuable assets to <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>.</p>\n\n<p>Over the years, I have developed strong skills in <strong>Python, AI automation workflows, SQL, N8N, Power BI, Tableau, Machine Learning, and other relevant tools and technologies</strong>. My passion lies in using data to drive informed decision-making and contribute to business growth. My skills, experience, and enthusiasm make me an ideal fit for any relevant positions in <strong>{{ $('company name').item.json.content.parts[0].text }}</strong>.</p>\n\n<p>I have attached my resume to this email. Please feel free to review it and let me know if any job openings match my skills and experience. I’m confident I can make meaningful contributions to your team.</p>\n\n<p>Thank you for taking the time to read this email. I look forward to hearing from you and discussing how I can support your team's success.</p>\n\n<p>Best regards,</p>\n<p>Yashika Sahu</p>",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1232,
+        -48
+      ],
+      "id": "ff825a53-2b83-4666-a920-f810bd3ac71d",
+      "name": "Send a Mail3",
+      "webhookId": "89941501-a56f-4881-b1d2-d4cc9730c4bd",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "8jdSFJbcff1oFiEg",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Email 4 is Deliverable').item.json.email }}",
+        "subject": "Application for Data Analyst Intern",
+        "message": "=Dear Sir/Ma'am,\n\nI hope you're doing well. I am interested in exploring job opportunities at {{ $('company name').item.json.content.parts[0].text }}. My name is Yashika Sahu, and I am a Data Analyst. My skills and expertise can be valuable assets to {{ $('company name').item.json.content.parts[0].text }}.\n\nOver the years, I have developed strong skills in Python, AI automation workflows, SQL, N8N, Power BI, Tableau, Machine Learning, and other relevant tools and technologies. My passion lies in using data to drive informed decision-making and contribute to business growth. My skills, experience, and enthusiasm make me an ideal fit for any relevant positions in {{ $('company name').item.json.content.parts[0].text }}.\n\nI have attached my resume to this email. Please feel free to review it and let me know if any job openings match my skills and experience. I’m confident I can make meaningful contributions to your team.\n\nThank you for taking the time to read this email. I look forward to hearing from you and discussing how I can support your team's success.\n\nBest regards,\nYashika Sahu",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1232,
+        160
+      ],
+      "id": "b63d497a-deb3-43bf-87a7-33ff6341a76f",
+      "name": "Send a Mail4",
+      "webhookId": "89941501-a56f-4881-b1d2-d4cc9730c4bd",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "8jdSFJbcff1oFiEg",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10
+            },
+            {
+              "triggerAtHour": 11
+            },
+            {
+              "triggerAtHour": 13
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -928,
+        -128
+      ],
+      "id": "eba74675-ba2d-412d-a909-258a869c1add",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Check Mailed or not",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "company name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Iterate 10 Items": {
+      "main": [
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "company name": {
+      "main": [
+        [
+          {
+            "node": "check Email1 is not empty",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "check Email2 is not empty",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "check Email3 is not empty",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "check Email4 is not empty",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Mailed or not": {
+      "main": [
+        [
+          {
+            "node": "Iterate 10 Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "check Email1 is not empty": {
+      "main": [
+        [
+          {
+            "node": "Email1 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email1 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "check Email2 is not empty": {
+      "main": [
+        [
+          {
+            "node": "Email2 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email2 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "check Email3 is not empty": {
+      "main": [
+        [
+          {
+            "node": "Email3 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email3 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "check Email4 is not empty": {
+      "main": [
+        [
+          {
+            "node": "Email4 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email4 verifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email1 verifier": {
+      "main": [
+        [
+          {
+            "node": "Email 1 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email 1 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email2 verifier": {
+      "main": [
+        [
+          {
+            "node": "Email 2 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email 2 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email3 verifier": {
+      "main": [
+        [
+          {
+            "node": "Email 3 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email 3 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email4 verifier": {
+      "main": [
+        [
+          {
+            "node": "Email 4 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email 4 is Deliverable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email 1 is Deliverable": {
+      "main": [
+        [
+          {
+            "node": "Resume",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Resume",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email 2 is Deliverable": {
+      "main": [
+        [
+          {
+            "node": "Resume1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Resume1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email 3 is Deliverable": {
+      "main": [
+        [
+          {
+            "node": "Resume2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Resume2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email 4 is Deliverable": {
+      "main": [
+        [
+          {
+            "node": "Resume3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Resume3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resume": {
+      "main": [
+        [
+          {
+            "node": "Send a Mail1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resume1": {
+      "main": [
+        [
+          {
+            "node": "Send a Mail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resume2": {
+      "main": [
+        [
+          {
+            "node": "Send a Mail3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resume3": {
+      "main": [
+        [
+          {
+            "node": "Send a Mail4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a Mail1": {
+      "main": [
+        []
+      ]
+    },
+    "Send a Mail2": {
+      "main": [
+        []
+      ]
+    },
+    "Send a Mail3": {
+      "main": [
+        []
+      ]
+    },
+    "Send a Mail4": {
+      "main": [
+        []
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e9708a87-a179-4908-b3b7-c05527105af9",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c9c3114c8a7dfaa89a5410f61fbf9f861ec3a65e6fc97c48c06dee91595c234d"
+  },
+  "id": "QQv3VOIXeqA60kwD",
+  "tags": []
+}
