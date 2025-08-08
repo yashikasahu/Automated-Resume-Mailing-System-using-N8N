@@ -1,55 +1,87 @@
-# 📬Automated Resume Mailing System using N8N
+# 📬 Automated Resume Mailing System using N8N
 
-A smart automation workflow that sends personalized job application emails with attachments to multiple companies daily — fully powered by n8n, Google Sheets, and Gmail API.
-
----
-
-## 🚀 Features
-
-- Fetches company data from Google Sheets
-- Sends dynamic HTML emails with Handlebars
-- Attaches custom resume
-- Updates Google Sheet with email status and timestamp
-- Fully automatic — no manual effort required
+A smart automation workflow that sends **personalized job application emails** (with attachments) to multiple companies **daily** — fully powered by **n8n, Google Sheets, and Gmail API**.
 
 ---
 
-## 🛠 Tools Used
+## ✨ Features
 
-- n8n (Cloud)
-- Google Sheets
-- Gmail API
-- Handlebars.js
-- HTML email templates
+* 📄 **Fetches contact data** from Google Sheets
+* 🔍 **Checks if an email has already been sent** (avoiding duplicates)
+* ✅ **Verifies email deliverability** using Hunter.io
+* 📧 **Sends personalized emails** to valid addresses
+* 📊 **Updates Google Sheets** with:
+
+  * Sent date
+  * Status ("Mailed")
+* 📨 **Supports multiple email slots per company** (up to 4 in current workflow)
+* ⚡ **Fully automatic** — no manual effort required
+
+---
+
+## 🛠 Tools & Services Used
+
+* **n8n (Cloud)** – Workflow automation platform
+* **Google Sheets** – Data storage and tracking
+* **Gmail API** – Sending emails
+* **Hunter.io** – Email deliverability check
+* **Google Gemini API** – Extracts company names
+* **Google Drive** – Attaches resume
+* **Scheduler** – Automates daily runs
 
 ---
 
 ## 📸 Screenshots
 
--Workflow in n8n   
-<img width="1265" height="478" alt="Screenshot 2025-08-07 171326" src="https://github.com/user-attachments/assets/d99121fb-ca49-47a1-83ef-8c95311abbb1" />
+### 🛠 Workflow in n8n
 
--Sample Email Output        
-![Email]![WhatsApp Image 2025-08-07 at 19 06 55_e1da8b08](https://github.com/user-attachments/assets/ee626f2d-be17-45c7-a018-75bb1ccb2926)  
-## emails are blured because of privacy reason 
----
+<img width="911" height="321" alt="Screenshot 2025-08-08 160226" src="https://github.com/user-attachments/assets/7b4382a2-35c3-4829-aaf4-75b278687f1d" />
 
-## 📂 Files Included
+### 📧 Sample Email Output
 
-- `job-outreach-workflow.json` – The complete n8n flow
-- `email-template.html` – The email content
-- `resume.pdf` – (Optional) Sample resume used
+![Email Sample](https://github.com/user-attachments/assets/ee626f2d-be17-45c7-a018-75bb1ccb2926)
+
+> **Note:** Emails are blurred for privacy reasons.
 
 ---
 
-## 🧠 How It Works
+## 📂 Workflow Structure
 
-1. n8n pulls data from Google Sheets
-2. Sends personalized email to each row
-3. Attaches resume and logs sent date in sheet
+1. **Schedule Trigger** – Runs automation on a set schedule
+2. **Get Rows from Google Sheets** – Fetches contact list
+3. **Check Mailed or Not** – Skips contacts already emailed
+4. **Insert to Items & Update Row in Sheet** – Keeps sheet updated
+5. **Attach Resume** – Fetches file from Google Drive
+6. **Email Verification & Sending** – Multiple parallel branches for different email fields (Email 1 to Email 4)
+7. **Status Update** – Marks as "Mailed" once sent
 
 ---
 
-## 🧾 License
+## 🚀 Setup Instructions
 
-MIT – feel free to use and modify!
+1. **Clone this repository**
+
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
+2. **Import the n8n workflow**
+
+   * Open n8n
+   * Go to **Import Workflow**
+   * Upload the provided `.json` file
+     
+3. **Configure environment variables**
+
+   * Gmail API or SMTP credentials
+   * Google Sheets API credentials
+   * Hunter.io API key
+     
+4. **Deploy & Run**
+
+---
+
+## 📜 License
+
+MIT – Feel free to use and modify!
+
+---
